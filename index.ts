@@ -16,19 +16,8 @@ await agent.login({
   password: process.env.BSKY_PASSWORD!,
 });
 
-// const bloot = "You can find the code for this bleet >>>here<<<";
-// await agent.post({
-//   text: bloot,
-//   entities: [
-//     {
-//       index: { start: bloot.indexOf(">>>") + 3, end: bloot.indexOf("<<<") },
-//       type: "link",
-//       value: "https://github.com/aliceisjustplaying/bluesky-experiments",
-//     },
-//   ],
-// });
-
-const bloot = 'You can find the code for this bleet >>>here<<<, now with a link card as well!';
+const bloot =
+  'You can find the code for this bleet >>>here<<<, now with a link card that has a nice title and description!';
 await agent.post({
   text: bloot,
   entities: [
@@ -53,8 +42,8 @@ await agent.post({
     $type: 'app.bsky.embed.external',
     external: {
       uri: 'https://github.com/aliceisjustplaying/bluesky-experiments',
-      title: '',
-      description: '',
+      title: "alice's bluesky experiments",
+      description: "now i'm just playing around with the api",
     },
   },
 });
