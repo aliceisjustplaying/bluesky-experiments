@@ -1,0 +1,19 @@
+{
+  "collection": "app.bsky.feed.post",
+  "repo": "did:plc:by3jhwdqgbtrcc7q4tkkv3cf",
+  "record": {
+    "text": "this is a reply",
+    "reply": {
+      "root": {
+        "uri": "at://did:plc:by3jhwdqgbtrcc7q4tkkv3cf/app.bsky.feed.post/3jszamd374c2h",
+        "cid": "bafyreidt72dmp3dsq5qs5mocrauyj3ctwzyywxnjcd45rde2quae3zanjq"
+      },
+      "parent": {
+        "uri": "at://did:plc:by3jhwdqgbtrcc7q4tkkv3cf/app.bsky.feed.post/3jszamd374c2h",
+        "cid": "bafyreidt72dmp3dsq5qs5mocrauyj3ctwzyywxnjcd45rde2quae3zanjq"
+      }
+    },
+    "createdAt": "2023-04-10T11:37:37.791Z",
+    "$type": "app.bsky.feed.post"
+  }
+}
