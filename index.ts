@@ -1,11 +1,11 @@
-import pkg from "@atproto/api";
+import pkg from '@atproto/api';
 const { BskyAgent } = pkg;
-import * as dotenv from "dotenv";
-import process from "node:process";
+import * as dotenv from 'dotenv';
+import process from 'node:process';
 dotenv.config();
 
 const agent = new BskyAgent({
-  service: "https://bsky.social",
+  service: 'https://bsky.social',
   persistSession: (evt, sess) => {
     // store the session-data for reuse
   },
@@ -16,14 +16,45 @@ await agent.login({
   password: process.env.BSKY_PASSWORD!,
 });
 
-const bloot = "You can find the code for this bleet >>>here<<<";
+// const bloot = "You can find the code for this bleet >>>here<<<";
+// await agent.post({
+//   text: bloot,
+//   entities: [
+//     {
+//       index: { start: bloot.indexOf(">>>") + 3, end: bloot.indexOf("<<<") },
+//       type: "link",
+//       value: "https://github.com/aliceisjustplaying/bluesky-experiments",
+//     },
+//   ],
+// });
+
+const bloot = 'You can find the code for this bleet >>>here<<<, now with a link card as well!';
 await agent.post({
   text: bloot,
   entities: [
     {
-      index: { start: bloot.indexOf(">>>") + 3, end: bloot.indexOf("<<<") },
-      type: "link",
-      value: "https://github.com/aliceisjustplaying/bluesky-experiments",
+      index: { start: bloot.indexOf('>>>') + 3, end: bloot.indexOf('<<<') },
+      type: 'link',
+      value: 'https://github.com/aliceisjustplaying/bluesky-experiments',
     },
   ],
+  // facets: [
+  //   {
+  //     index: { byteStart: bloot.indexOf('>>>') + 3, byteEnd: bloot.indexOf('<<<') },
+  //     features: [
+  //       {
+  //         $type: 'app.bsky.richtext.facet#link',
+  //         uri: 'https://github.com/aliceisjustplaying/bluesky-experiments',
+  //       },
+  //     ],
+  //   },
+  // ],
+  embed: {
+    $type: 'app.bsky.embed.external',
+    external: {
+      uri: 'https://github.com/aliceisjustplaying/bluesky-experiments',
+      title: '',
+      description: '',
+    },
+  },
 });

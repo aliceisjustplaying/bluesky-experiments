@@ -1,0 +1,41 @@
+{
+  "collection": "app.bsky.feed.post",
+  "repo": "did:plc:by3jhwdqgbtrcc7q4tkkv3cf",
+  "record": {
+    "text": "from code https://github.com/aliceisjustplaying/bluesky-experiments/blob/07c0512af2da47ef80db41a814cb54e1d8fea021/index.ts#L20-L29",
+    "facets": [
+      {
+        "index": {
+          "byteStart": 10,
+          "byteEnd": 130
+        },
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://github.com/aliceisjustplaying/bluesky-experiments/blob/07c0512af2da47ef80db41a814cb54e1d8fea021/index.ts#L20-L29"
+          }
+        ]
+      }
+    ],
+    "reply": {
+      "root": {
+        "cid": "bafyreieuqg74z5csukgwh4g4t47oocjbax6mkaobakftgalrpzvmsbmpde",
+        "uri": "at://did:plc:by3jhwdqgbtrcc7q4tkkv3cf/app.bsky.feed.post/3jsz7uyc24s2k"
+      },
+      "parent": {
+        "uri": "at://did:plc:pff6xmwkhyl3hnatx6excmpi/app.bsky.feed.post/3jsza5ip6el2q",
+        "cid": "bafyreih4k7hvumt53nzdnpnm6pvrhrykjd5v7c57t434pnnvih3cgak35e"
+      }
+    },
+    "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+        "uri": "https://github.com/aliceisjustplaying/bluesky-experiments/blob/07c0512af2da47ef80db41a814cb54e1d8fea021/index.ts#L20-L29",
+        "title": "",
+        "description": ""
+      }
+    },
+    "createdAt": "2023-04-10T11:21:56.258Z",
+    "$type": "app.bsky.feed.post"
+  }
+}
